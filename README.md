@@ -151,9 +151,9 @@ When you initialize and use the program, it automatically creates a `.repo` hidd
 ---
 
 ## Customization
-- **Diff Calculation Memory Scaling** In `utils.c`, the `count_lines` function dynamically scales memory for file line parsing starting from a 1000-line capacity. If you regularly commit massive source files (e.g., 100,000+ lines), you can increase the initial `capacity` variable to reduce realloc overhead.
+- **Diff Calculation Memory Scaling**: In `utils.c`, the `count_lines` function dynamically scales memory for file line parsing starting from a 1000-line capacity. If you regularly commit massive source files (e.g., 100,000+ lines), you can increase the initial `capacity` variable to reduce realloc overhead.
 
-**Hash Algorithm** The integrity checks currently rely on MD5 (`calc_md5_hash` in `utils.c`). You can easily swap this out for SHA-256 by updating the OpenSSL context to `SHA256_CTX` if stronger cryptographic integrity is required.
+- **Hash Algorithm**: The integrity checks currently rely on MD5 (`calc_md5_hash` in `utils.c`). You can easily swap this out for SHA-256 by updating the OpenSSL context to `SHA256_CTX` if stronger cryptographic integrity is required.
 
 ---
 
